@@ -1,0 +1,703 @@
+/* Google Font Link */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins" , sans-serif;
+}
+
+/*
+  this file is used to fix the design of the website
+*/
+
+*{
+  font-family: Arial,Helvetica,sans-serif;
+}
+.clearfix{
+    clear: both;
+    float: none;
+}
+.text-right{
+  text-align: right;
+}
+.menu-sidebar{
+  width: 70%;
+}
+.menu-sidebar button{
+  background-color: #47DCFA;
+  margin-top: 2%;
+  width: 4%;
+  float: left;
+  border: none;
+  margin-left: 1%;
+}
+.menu-sidebar button:hover{
+  cursor: pointer;
+}
+.menu-sidebar img{
+  width:100%;
+}
+.logo{
+  margin-top: 1%;
+  width: 3%;
+  float: left;
+  margin-left: 1%;
+}
+.logo img{
+  width: 100%;
+}
+
+.sidebar{
+  position: fixed;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 78px;
+  background: #11101D;
+  padding: 6px 14px;
+  z-index: 99;
+  transition: all 0.5s ease;
+}
+.sidebar.open{
+  width: 250px;
+}
+.sidebar .logo-details{
+  height: 60px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.sidebar .logo-details .icon{
+  opacity: 0;
+  transition: all 0.5s ease;
+  width: 40px;
+  margin-right: 3%;
+}
+.sidebar .logo-details .logo_name{
+  margin-top: 2%;
+  color: #fff;
+  font-size: 20px;
+  font-weight: 600;
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details .icon,
+.sidebar.open .logo-details .logo_name{
+  opacity: 1;
+}
+.sidebar .logo-details #btn{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  transition: all 0.4s ease;
+  font-size: 23px;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.5s ease;
+}
+.sidebar.open .logo-details #btn{
+  text-align: right;
+}
+.sidebar i{
+  color: #fff;
+  height: 60px;
+  min-width: 50px;
+  font-size: 28px;
+  text-align: center;
+  line-height: 60px;
+}
+.sidebar .nav-list{
+  margin-top: 20px;
+  height: 100%;
+}
+.sidebar li{
+  position: relative;
+  margin: 8px 0;
+  list-style: none;
+}
+.sidebar li .tooltip{
+  position: absolute;
+  top: -20px;
+  left: calc(100% + 15px);
+  z-index: 3;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-size: 15px;
+  font-weight: 400;
+  opacity: 0;
+  white-space: nowrap;
+  pointer-events: none;
+  transition: 0s;
+}
+.sidebar li:hover .tooltip{
+  opacity: 1;
+  pointer-events: auto;
+  transition: all 0.4s ease;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.sidebar.open li .tooltip{
+  display: none;
+}
+.sidebar input{
+  font-size: 15px;
+  color: #FFF;
+  font-weight: 400;
+  outline: none;
+  height: 50px;
+  width: 100%;
+  width: 50px;
+  border: none;
+  border-radius: 12px;
+  transition: all 0.5s ease;
+  background: #1d1b31;
+}
+.sidebar.open input{
+  padding: 0 20px 0 50px;
+  width: 100%;
+}
+.sidebar .bx-search{
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  font-size: 22px;
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar.open .bx-search:hover{
+  background: #1d1b31;
+  color: #FFF;
+}
+.sidebar .bx-search:hover{
+  background: #FFF;
+  color: #11101d;
+}
+.sidebar li a{
+  display: flex;
+  height: 100%;
+  width: 100%;
+  border-radius: 12px;
+  align-items: center;
+  text-decoration: none;
+  transition: all 0.4s ease;
+  background: #11101D;
+}
+.sidebar li a:hover{
+  background: #FFF;
+}
+.sidebar li a .links_name{
+  color: #fff;
+  font-size: 15px;
+  font-weight: 400;
+  white-space: nowrap;
+  opacity: 0;
+  pointer-events: none;
+  transition: 0.4s;
+}
+.sidebar.open li a .links_name{
+  opacity: 1;
+  pointer-events: auto;
+}
+.sidebar li a:hover .links_name,
+.sidebar li a:hover i{
+  transition: all 0.5s ease;
+  color: #11101D;
+}
+.sidebar li i{
+  height: 50px;
+  line-height: 50px;
+  font-size: 18px;
+  border-radius: 12px;
+}
+.sidebar li.profile{
+  position: fixed;
+  height: 60px;
+  width: 78px;
+  left: 0;
+  bottom: -8px;
+  padding: 10px 14px;
+  background: #1d1b31;
+  transition: all 0.5s ease;
+  overflow: hidden;
+}
+.sidebar.open li.profile{
+  width: 250px;
+}
+.sidebar li .profile-details{
+  display: flex;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+.sidebar li img{
+  height: 45px;
+  width: 45px;
+  object-fit: cover;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.sidebar li.profile .name,
+.sidebar li.profile .job{
+  font-size: 15px;
+  font-weight: 400;
+  color: #fff;
+  white-space: nowrap;
+}
+.sidebar li.profile .job{
+  font-size: 12px;
+}
+.sidebar .profile #log_out{
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  background: #1d1b31;
+  width: 100%;
+  height: 60px;
+  line-height: 60px;
+  border-radius: 0px;
+  transition: all 0.5s ease;
+}
+.sidebar.open .profile #log_out{
+  width: 50px;
+  background: none;
+}
+.home-section{
+  position: relative;
+  min-height: 100vh;
+  top: 0;
+  left: 78px;
+  width: calc(100% - 78px);
+  transition: all 0.5s ease;
+  z-index: 2;
+}
+
+.search{
+  padding: 10%;
+  background-image: url(../img/still-edible.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.search h2{
+  color: white;
+  text-align: center;
+  font-family: serif; 
+  font-size: 40px;
+  text-shadow: 2px 2px 8px #47DCFA;
+}
+.search h3{
+  color: white;
+  text-align: center;
+  margin-bottom: 2%;
+  font-family: serif; 
+  font-size: 30px;
+  text-shadow: 2px 2px 8px #47DCFA;
+}
+.search .container{
+  width:80%;
+  margin: 0 auto;
+  padding: 1%;
+}
+
+.search input[type="search-box"]{
+  border-radius: 25px;
+  width: 60%;
+  padding: 1%;
+  margin-left: 15%;
+  font-size: 1rem;
+}
+.search-btn{
+  padding: 1%;
+    border: none;
+    font-size: 1rem;
+    border-radius: 25px;
+  background-color: #FF99CC;
+    color: white;
+    cursor: pointer;
+}
+.search-btn:hover{
+  cursor: pointer;
+  background-color:#FFCCE5;
+}
+
+.menu{
+  line-height: 60px;
+}
+.menu ul{
+  list-style-type: none;
+  margin-right: 1%;
+}
+.menu ul li{
+  margin-left: 2%;
+  display: inline-flex;
+  padding-left: 1%;
+  padding-right: 1%;
+  font-weight: bold;
+  font-size: 80%;
+}
+.menu ul li a{
+  text-decoration: none;
+  color: black;
+}
+.menu select{
+  font-size: 100%;
+  font-weight: bold;
+  background-color: #47DCFA;
+  border-color: #47DCFA;
+  border-style: none;
+}
+
+.navigation{
+  opacity: 0.9;
+  width:100%;
+  background-color: #47DCFA;
+}
+select{
+  cursor: pointer;
+}
+.food {
+  background-color: #ececec;
+  padding: 2% 0;
+}
+.food .container{
+  width: 10S0%;
+  margin: 0 auto;
+  padding: 2% 2% 2% 8%;
+}
+
+.food .container .box-1{
+  width: 43%;
+    margin: 1% ;
+    padding: 2%;
+    float: left;
+    background-color: white;
+    border-radius: 15px;
+}
+.food .container .box-1:hover{
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.food .container .box-1 img{
+  height: 80px;
+  width: 80px;
+  /*margin-left: 5%;*/
+  float: left;
+}
+.food .container .box-1 h4{
+  width: 70%;
+    float: left;
+    margin-left: 8%;
+}
+
+.food .container .box-1 p{
+  width: 70%;
+    float: left;
+    margin-left: 8%;
+    color: #747d8c;
+}
+.food h1{
+  margin-top: 2%;
+  text-align: center;
+  /*font-weight: bold;
+  font-size: 20px;*/
+}
+
+.food .container .box-1 input{
+  background-color: #FFFF99;
+    float: left;
+    margin-left: 8%;
+    padding: 1%;
+    border-radius: 25px;
+    border: none;
+    width:70%;
+}
+.food .container .box-1 input:hover{
+  cursor: pointer;
+  background-color: #FFFFCC;
+}
+.food .container .box-1 hr {
+    display: block;
+    width: 70%;
+    float: left;
+    margin-left: 8%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-style: inset;
+    border-width: 1px;
+}
+.clear-fix{
+  clear: both;
+    float: none;
+}
+.food a{
+  margin: 41%;
+  background-color: #FF99CC;
+  text-decoration: none;
+  padding: 1%;
+  border-radius: 25px;
+  color: white;
+}
+.food a:hover{
+  cursor: pointer;
+  background-color:#FFCCE5;
+}
+.categories-section{
+  width: 100%;
+  height: 400px;
+  overflow: auto;
+  padding: 1% 0;
+}
+.categories-header ul{
+  list-style-type: none;
+  margin: 0 6% 0 23%;
+}
+.categories-header ul li{
+  display: inline-flex;
+  margin-right: 22%;
+
+}
+.categories-section .container input{
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  border:none;
+  background-color: #C0C0C0;
+  color: white;
+}
+.categories-section .container input:hover{
+  background-color: black;
+  background-color:#E0E0E0;
+  cursor: pointer;
+}
+.categories-section .container .categories-box ul{
+  list-style-type: none;
+  margin: 5% 5% 0 10%;
+
+}
+.categories-section .container .categories-box ul li{
+  display: inline-flex;
+  margin-right: 2%;
+  position: relative;
+}
+.categories-box a{
+  border-radius: 25px;  
+}
+.categories-box img{
+  opacity: 1;
+  border-radius: 25px;
+  height:200px;
+  width:280px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.categories-box h2{
+  position: absolute;
+  display: none;
+  bottom: 70%;
+  left: 10px;
+  color: black;
+}
+.categories-box h2 hr{
+  color: #47DCFA;
+  display: block;
+  width: 100%;
+  float: left;
+  margin-bottom: 1%;
+  border-style: solid;
+   border-width: 2px;
+}
+.categories-box img:hover{
+  opacity:0.2;
+}
+.categories-box img:hover + h2{
+  display: block;
+}
+.nav-buttons a {
+  text-decoration: none;
+  padding: 8px 16px;
+}
+@keyframes example{
+  from{
+    opacity: 0.2;
+    left: 10%;
+    top: 0;
+    bottom:0;
+    right:0;
+  }
+  to{
+    opacity: 1;
+    left:0;
+    top: 0;
+    bottom:0;
+    right:0;
+  }
+}
+.team{
+  background-color: #ececec;
+  padding: 2% 0;
+}
+.team .container .box2{
+  animation-name: example;
+  animation-duration: 2s;
+  opacity: 1;
+  position: relative;
+  left:0%;
+  top: 0%;
+  bottom: 0%;
+  right:0%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  width: 70%;
+  margin: 0 0 0 13% ;
+  padding: 3%;
+  float: left;
+  background-color: white;
+  border-radius: 15px;
+}
+.team img{
+  height: 160px;
+  width: 150px;
+    float: left;
+    border-radius: 50%;
+}
+.team  h4{
+  width: 70%;
+    float: left;
+    margin-left: 8%;
+    margin-top: 2%;
+    font-size: 25px;
+    font-family: serif;
+    color: #2A94C9;
+}
+
+.team hr{
+  display: block;
+    width: 70%;
+    float: left;
+    margin-left: 8%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    border-style: inset;
+    border-width: 1px;
+}
+.team  p{
+  width: 70%;
+    float: left;
+    margin-left: 8%;
+    font-family: serif;
+    font-weight: 900;
+}
+
+.nav-buttons a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.nav-buttons .previous {
+  background-color: #f1f1f1;
+  color: black;
+}
+
+.nav-buttons .next {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.nav-buttons .round {
+  border-radius: 50%;
+}
+
+
+.footer{
+  padding: 2%;
+  background-color: #887F78;
+}
+.footer .container{
+  width: 100%;
+  margin: 0 auto;
+  padding: 1%;
+}
+.footer p{
+  color: white;
+  font-weight: bold;
+}
+.footer p a{
+  color: white;
+}
+.left{
+  margin:1%;
+  float: left;
+  width:31%;
+}
+.left p{
+  width: 100%;
+  text-align: left;
+}
+.right{
+  margin:1%;
+  float: left;
+  width:31%;
+}
+.right .social-image{
+  margin-left:50%;
+}
+.right .social-image a{
+  margin-left: 3%;
+}
+.center{
+  margin:1%;
+  float: left;
+  width:31%;
+}
+.center p{
+  text-align: center;
+}
+.sidebar.open ~ .home-section{
+  left: 250px;
+  width: calc(100% - 250px);
+}
+.sidebar.open ~ .home-section .team img{
+  /*margin-left: 6%;*/
+  height: 120px;
+  width: 120px;
+}
+.sidebar.open ~ .home-section .team p{
+  font-size: 700;
+}
+.sidebar.open ~ .home-section .team h4{
+  font-size: 20px;
+  margin-top: 0;
+
+}
+.sidebar.open ~ .home-section .categories-section .categories-box ul{
+  margin-left: 15%;
+}
+.sidebar.open ~ .home-section .food .container .box-1 img{
+  width:60px;
+  height:60px;
+}
+.sidebar.open ~ .home-section .food .container .box-1 .food-description input{
+  margin-left: 25%;
+}
+.sidebar.open ~ .home-section .food a{
+  margin-left: 41%;
+}
+.sidebar.open ~ .home-section .food .container{
+  margin-left: 3%; 
+}
+.sidebar.open ~ .home-section .categories-section .categories-box img{
+  width: 230px;
+}
+.sidebar.open ~ .home-section .team .container .box2{
+  margin-left: 17%;
+}
+.sidebar.open ~ .home-section .footer .right .social-image{
+  margin-left: 40%;
+}
+@media (max-width: 420px) {
+  .sidebar li .tooltip{
+    display: none;
+  }
+}
