@@ -18,7 +18,9 @@
     <li>footer.</li>
   </ol>
 <h2>Video illustration</h2>
-  
+
+https://user-images.githubusercontent.com/77229978/128117671-9d7bab8f-3de1-4f01-bbcd-d90240923577.mp4
+
 <h2>what's next?</h2>
 <ul>
   <li>Creating a well designed and functional database</li>
